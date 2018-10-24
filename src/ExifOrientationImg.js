@@ -45,6 +45,7 @@ class ExifOrientationImg extends Component {
     const {
       src,
       alt,
+      className =  (this.props.className || '') +' o' + orientation
       style = {},
       onLoad,
       ...imgProps,
@@ -58,6 +59,7 @@ class ExifOrientationImg extends Component {
         onLoad={this._onImageLoaded.bind(this)}
         src={src}
         alt={alt}
+        class={className}
         style={{
           ...(
             orientation ?
